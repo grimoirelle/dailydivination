@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <body>
+<style>
+  body {
+    background-image: url('https://i.pinimg.com/originals/13/3f/7a/133f7a644b1076a9804e30a63f51cb47.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+</style>
+
+    <style>
+      .container { text-align: center; font-family: sans-serif; padding: 20px; }
+      img { max-width: 300%; height: 500px; border-radius: 8px; margin-top: 15px; }
+      button { padding: 10px 20px; font-size: 26px; cursor: pointer; background: #000000; color: white; border: none; border-radius: 5px; }
+    </style>
+    
+  <body>
+    <div class="container">
+      <h1 style="color: white;">𝔗𝔬𝔡𝔞𝔶'𝔰 𝔇𝔦𝔳𝔦𝔫𝔞𝔱𝔦𝔬𝔫</h1>
+      <button onclick="showRandomGif()">REVEAL</button>
+          <div style="text-align: center;">
+      <img
+        id="display-gif"
+        src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Z2MyYm53a3BleDE1Zjhobmw1cGgwMzdoN3p2NDAzbDZvNXJwaTJpdiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/3d2uMDFpjWT2H1vfwD/giphy.gif"
+        alt="Read your fate below."
+      />
+    </div>
+
+    <script>
+      // 1. Add your GIF URLs to this list
+      const gifList = [
+          "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXkwODVoMGxicTRvbGdkdHdoZTA5MHoxb3liYnVsZDNuaWVlaG5oNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/tMyB6pKuhlkNa14xzH/giphy.gif",
+          "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3d6djQ5dDY2dDZ3YmtyZTZhejMwZ3pscHh6NWluZ2I0a3JrdnVpNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/kUOcoWwcyvflt1vIvT/giphy.gif",
+          "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXVwb2RpeDZzYmh5d3hpajFxemN6MHc4NTkxbnh1Y3Q4MG9xYTJuMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/YC9JvBJVvVHvafZAYs/giphy.gif",
+          "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2hzb2xrMjYwNW0wb3FndnJnMHdmc2o0bzBkaWs5ZnJjZGsybTB6ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/BepdyjfbIDbcLWDym3/giphy.gif"
+      ];
+
+      function showRandomGif() {
+          const imgElement = document.getElementById("display-gif");
+          // Pick a random index from the array
+          const randomIndex = Math.floor(Math.random() * gifList.length);
+          // Set the image src to the random GIF
+          imgElement.src = gifList[randomIndex];
+      }
+    </script>
+  </body>
+</html>
